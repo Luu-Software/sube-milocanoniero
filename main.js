@@ -12,18 +12,16 @@ boton.addEventListener("click", () => {
   let km
   let precio
   let registrado
-  let colectivo
-  let tarifa
+  let tarifo
 
-  tarifa = viejopete.value
-  colectivo = bondi.value
+  tarifo = viejopete.value
   km = distancia.value
   registrado = registrada.value
 
-  if (bondi === "CABA")
+  if (bondi.value === "CABA"){
     if (km > 0, km < 3) { 
       if (registrado === "si"){
-        if (tarifa === "si"){
+        if (tarifo === "si"){
           precio = 414.22
         }
   
@@ -39,7 +37,7 @@ boton.addEventListener("click", () => {
     }  
     else if (km > 3, km < 6) { 
       if (registrado === "si"){
-        if (tarifa === "si"){
+        if (tarifo === "si"){
           precio = 460.26
         }
   
@@ -55,7 +53,7 @@ boton.addEventListener("click", () => {
     }
     else if (km > 6, km < 12){ 
       if (registrado === "si"){
-        if (tarifa === "si"){
+        if (tarifo === "si"){
           precio = 495.45
         }
         else {
@@ -70,7 +68,7 @@ boton.addEventListener("click", () => {
     }
     else if (km > 12, km < 27){ 
       if (registrado === "si"){
-        if (tarifa === "si"){
+        if (tarifo === "si"){
           precio = 531.20
         }
         else {
@@ -84,10 +82,12 @@ boton.addEventListener("click", () => {
         precio = 1876.90
       }
     }
-    if (bondi === "provincia") 
+  }
+    
+    if (bondi.value === "provincia") {
       if (km > 0, km < 3) {
         if (registrado === "si"){
-          if (tarifa === "si"){
+          if (tarifo === "si"){
             precio = 546.79 
           }
     
@@ -103,7 +103,7 @@ boton.addEventListener("click", () => {
       }  
       else if (km > 3, km < 6) {
         if (registrado === "si"){
-          if (tarifa === "si"){
+          if (tarifo === "si"){
             precio = 615.14
           }
     
@@ -119,7 +119,7 @@ boton.addEventListener("click", () => {
       }
       else if (km > 6, km < 12){
         if (registrado === "si"){
-          if (tarifa === "si"){
+          if (tarifo === "si"){
             precio = 683.48
           }
           else {
@@ -134,14 +134,14 @@ boton.addEventListener("click", () => {
       }
       else if (km > 12, km < 27){
         if (registrado === "si"){
-          if (tarifa === "si"){
+          if (tarifo === "si"){
             precio = 820.18
           }
           else {
     
             precio = 1822.63
     
-              }
+              } 
         }
         else{
           precio = 3645.26
@@ -150,7 +150,7 @@ boton.addEventListener("click", () => {
       }
       else if (km > 27){
         if (registrado === "si"){
-          if (tarifa === "si"){
+          if (tarifo === "si"){
             precio = 964.26
           }
           else {
@@ -163,5 +163,7 @@ boton.addEventListener("click", () => {
           precio = 4285.62
         }
       }
-  tarifa.innerText = precio;
+
+    }
+        tarifa.innerText = precio;
 }); 
