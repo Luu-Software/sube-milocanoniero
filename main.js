@@ -20,83 +20,148 @@ boton.addEventListener("click", () => {
   km = distancia.value
   registrado = registrada.value
 
-if (colectivo === "CABA")
-  if (km > 0, km < 3) {
-    if (registrado === "si"){
-      if (tarifa === "si"){
-        precio = 414.22
+  if (bondi === "CABA")
+    if (km > 0, km < 3) { 
+      if (registrado === "si"){
+        if (tarifa === "si"){
+          precio = 414.22
+        }
+  
+          else {
+            precio = 920.48
+  
+          }
+          }
+  
+          else {
+          precio = 1463.56
+          }
+    }  
+    else if (km > 3, km < 6) { 
+      if (registrado === "si"){
+        if (tarifa === "si"){
+          precio = 460.26
+        }
+  
+          else {
+            precio = 1022.81
+  
+          }
+            }
+            else {
+              precio = 1626.27
+            }
+  
+    }
+    else if (km > 6, km < 12){ 
+      if (registrado === "si"){
+        if (tarifa === "si"){
+          precio = 495.45
+        }
+        else {
+  
+          precio = 1101.59
+  
+            }    }
+      else {
+        precio = 1751.53
+      }    
+    
+    }
+    else if (km > 12, km < 27){ 
+      if (registrado === "si"){
+        if (tarifa === "si"){
+          precio = 531.20
+        }
+        else {
+  
+          precio = 1180.44
+  
+            }
+        precio = 1180.44 
       }
-
-        else {
-          precio =  920,48
-
-        }
-        }
-
-        else {
-        precio =  1.463,56
-        }
-  }  
-  else if (km > 3, km < 6) {
-    if (registrado === "si"){
-          precio = 1.022,81
+      else{
+        precio = 1876.90
+      }
+    }
+    if (bondi === "provincia") 
+      if (km > 0, km < 3) {
+        if (registrado === "si"){
+          if (tarifa === "si"){
+            precio = 546.79 
+          }
+    
+            else {
+              precio = 1215.09
+    
+            }
+            }
+    
+            else {
+            precio = 2430.18
+            }
+      }  
+      else if (km > 3, km < 6) {
+        if (registrado === "si"){
+          if (tarifa === "si"){
+            precio = 615.14
+          }
+    
+            else {
+              precio = 1366.97
+    
+            }
+              }
+              else {
+                precio = 2733.94
+              }
+    
+      }
+      else if (km > 6, km < 12){
+        if (registrado === "si"){
+          if (tarifa === "si"){
+            precio = 683.48
           }
           else {
-            precio = 1626,27
-          }
-
-  }
-  else if (km > 6, km < 12){
-    if (registrado === "si"){
-      precio =  1.101,59
-    }
-    else {
-      precio =  1.751,53
-    }    
-  
-  }
-  else if (km > 12, km < 27){
-    if (registrado === "si"){
-      precio = 1.180,44
-    }
-    else{
-      precio =  1.876,90
-    }
-  }
-if (colectivo === Provincia)
-  if (km > 0, km < 3) {
-    if (registrado === "si"){
-        precio = 920,48
-        }
+    
+            precio = 1518.85
+    
+              }    }
         else {
-          precio =  1.463,56
-        }
-  }  
-  else if (km > 3, km < 6) {
-    if (registrado === "si"){
-          precio = 1.022,81
+          precio = 3037.70
+        }    
+      
+      }
+      else if (km > 12, km < 27){
+        if (registrado === "si"){
+          if (tarifa === "si"){
+            precio = 820.18
           }
           else {
-            precio = 1626,27
+    
+            precio = 1822.63
+    
+              }
+        }
+        else{
+          precio = 3645.26
+        }
+        
+      }
+      else if (km > 27){
+        if (registrado === "si"){
+          if (tarifa === "si"){
+            precio = 964.26
           }
-
-  }
-  else if (km > 6, km < 12){
-    if (registrado === "si"){
-      precio =  1.101,59
-    }
-    else {
-      precio =  1.751,53
-    }    
-  
-  }
-  else if (km > 12, km < 27){
-    if (registrado === "si"){
-      precio = 1.180,44
-    }
-    else{
-      precio =  6969
-    }
-  }
+          else {
+    
+            precio = 2142.81
+    
+              }
+        }
+        else{
+          precio = 4285.62
+        }
+      }
   tarifa.innerText = precio;
 }); 
